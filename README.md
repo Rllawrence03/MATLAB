@@ -1,2 +1,2 @@
 # MATLAB
-Repo for miscellaneous academic matlab scratch
+Repo for miscellaneous academic scratch
