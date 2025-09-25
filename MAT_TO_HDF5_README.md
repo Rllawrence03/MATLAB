@@ -5,11 +5,13 @@ This repository contains scripts to convert MATLAB `.mat` files to HDF5 format, 
 ## Available Scripts
 
 ### 1. MATLAB Conversion Script
+
 **File: `mat_to_hdf5_converter.m`**
 
 A comprehensive MATLAB script that loads a `.mat` file and converts it to HDF5 format with proper hierarchical organization, compression, and chunking.
 
 #### Features:
+
 - Preserves original data structure and hierarchy
 - Includes compression (deflate level 9) for efficient storage
 - Proper chunking for optimal read/write performance
@@ -18,6 +20,7 @@ A comprehensive MATLAB script that loads a `.mat` file and converts it to HDF5 f
 - Handles multiple trials (extensible)
 
 #### Usage:
+
 ```matlab
 % Run in MATLAB
 mat_to_hdf5_converter
