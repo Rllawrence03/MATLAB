@@ -1,4 +1,7 @@
-function convertMatToHDF5(matFilePath, hdf5FilePath)
+convertMatToH5('C:\Users\rlawrence2\Documents\GitHub\AcademicUtils\biomechanics_test_data.mat', ...
+    'InfoStructureTest.h5')
+
+function convertMatToH5(matFilePath, hdf5FilePath)
     if ~exist(matFilePath, 'file')
         error('MAT file does not exist: %s', matFilePath);
     end
@@ -80,9 +83,9 @@ function writeNumeric(filename, path, data)
     
     if any(isnan(data(:))) || any(isinf(data(:)))
         dataClean = data;
-        dataClean(isnan(data)) = -999999;
+        dataClean(isnan(data)) = 0;
         dataClean(isinf(data) & data > 0) = 999999;
-        dataClean(isinf(data) & data < 0) = -999998;
+        dataClean(isinf(data) & data < 0) = -999999;
         data = dataClean;
     end
     
