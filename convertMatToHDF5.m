@@ -11,7 +11,6 @@ function convertMatToH5(matFilePath, hdf5FilePath)
     end
     
     matData = load(matFilePath);
-    
     h5create(hdf5FilePath, '/temp', 1);
     h5write(hdf5FilePath, '/temp', 1);
     
